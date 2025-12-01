@@ -11,7 +11,7 @@ def test_tc_01_001_01(page):
     page.goto("/")
 
     """Сохраненные переменные"""
-    new_item_name = f"denis-{random.randint(0, 9999999)}"
+    new_item_name = f"yuliya-{random.randint(0, 9999999)}"
 
     """Локатор для кнопки + new item"""
     new_item_btn_loc = "a[href='/view/all/newJob']"
@@ -23,6 +23,7 @@ def test_tc_01_001_01(page):
 
     """Локатор для лого"""
     logo_loc = "a[class='app-jenkins-logo']"
+
 
     """Локатор для созданного item"""
     created_item_loc = lambda name: f"td > a[href='job/{name}/']"
@@ -43,3 +44,11 @@ def test_tc_01_001_01(page):
     # text = page.locator(get_name_loc(new_item_name)).text_content()
 
     assert text == new_item_name
+
+#
+# def test(get_all_jobs):
+#     a = get_all_jobs
+
+
+# def test(delete_jobs):
+#     assert 1 == 1
